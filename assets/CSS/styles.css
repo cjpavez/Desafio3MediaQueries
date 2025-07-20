@@ -3,15 +3,115 @@
     padding: 0;
 }
 
-.grid-conteiner {
-    height: 800px;
-    display: grid;
-    grid-template-areas: 'header header'
-                         'aside main'
-                         'footer footer';
-    grid-template-rows: 6% auto 5%;
-    grid-template-columns: 20% 80%;
-       
+@media (max-width: 576px){
+    .grid-conteiner {
+        height: 800px;
+        display: grid;
+        grid-template-areas: 'header'
+                            'aside'
+                            'main'
+                            'footer';
+        grid-template-rows: auto;
+        grid-template-columns: auto;
+    }
+
+    .productos {
+        display: grid;
+        grid-template-areas:'vino'
+                            'cerveza'
+                            'pisco';
+        grid-template-rows: auto;
+        justify-content: center;
+    }
+    
+    .vinos {
+        grid-area: vino;
+        margin: 10px;
+    }
+
+    .cervezas {
+        grid-area: cerveza;
+        margin: 10px;
+    }
+
+    .piscos {
+        grid-area: pisco;
+        margin: 10px;
+    }
+    
+    .contenedor{
+        display: block;
+    }
+
+    .caja{
+        text-align: center;
+        height: 280px;
+        width: 210px;
+        padding: 10px;
+        border: solid 2px #9fcae84f;
+    }
+
+    .caja > .button {
+        background-color: rgba(0, 0, 255, 0.334);
+        color: white;    
+    }
+}
+
+@media (min-width: 576px) {
+    .grid-conteiner {
+        height: 800px;
+        display: grid;
+        grid-template-areas: 'header header'
+                            'aside main'
+                            'footer footer';
+        grid-template-rows: 6% auto 5%;
+        grid-template-columns: 20% 80%;
+        
+    }
+
+    .productos {
+        display: grid;
+        grid-template-areas:'vino vino vino'
+                            'cerveza cerveza cerveza'
+                            'pisco pisco pisco';
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+        justify-content: space-around;
+    }
+
+    .vinos {
+        grid-area: vino;
+        margin: 10px;
+    }
+
+    .cervezas {
+        grid-area: cerveza;
+        margin: 10px;
+    }
+
+    .piscos {
+        grid-area: pisco;
+        margin: 10px;
+    }
+    
+    .contenedor{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .caja{
+        text-align: center;
+        height: 280px;
+        width: 210px;
+        padding: 10px;
+        border: solid 2px #9fcae84f;
+    }
+
+    .caja > .button {
+        background-color: rgba(0, 0, 255, 0.334);
+        color: white;    
+    }
 }
 
 .header {
@@ -55,50 +155,6 @@ a {
 .main {
     grid-area: main;
     background-color: white;
-}
-
-.productos {
-    display: grid;
-    grid-template-areas:'vino vino vino'
-                        'cerveza cerveza cerveza'
-                        'pisco pisco pisco';
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto;
-    justify-content: space-around;
-}
-
-.vinos {
-    grid-area: vino;
-    margin: 10px;
-}
-
-.cervezas {
-    grid-area: cerveza;
-    margin: 10px;
-}
-
-.piscos {
-    grid-area: pisco;
-    margin: 10px;
-}
-
-.contenedor{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.caja{
-    text-align: center;
-    height: 280px;
-    width: 210px;
-    padding: 10px;
-    border: solid 2px #9fcae84f;
-}
-
-.caja > .button {
-    background-color: rgba(0, 0, 255, 0.334);
-    color: white;    
 }
 
 .footer {
